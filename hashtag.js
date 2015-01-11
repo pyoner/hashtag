@@ -6,7 +6,7 @@ $(function () {
 
     function hashchange () {
         var hash = window.location.hash;
-        var tag = hash ? hash.substr(1) : hash;
+        var tag = hash ? decodeURIComponent(hash.substr(1)) : hash;
         if (tag) {
             setHashTag(tag);
         }
