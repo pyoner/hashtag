@@ -8,6 +8,7 @@ $(function () {
         var hash = window.location.hash;
         var tag = hash ? decodeURIComponent(hash.substr(1)) : hash;
         if (tag) {
+            ga('send', 'event', 'window', 'hashchange', tag);
             setHashTag(tag);
         }
     }
